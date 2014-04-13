@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *placeTextField;
+@property (weak, nonatomic) IBOutlet UITableView *autocompleteTableView;
+@property (retain,nonatomic)NSMutableArray *placesArray;
+
+-(void)loadPlacesFromGoogleApi:(NSMutableString *)place;
 
 @end
